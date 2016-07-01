@@ -20,3 +20,9 @@ Example Input:
 Example Output:
 
 - Show user-created contacts as a list.
+Example Input:
+Example Output:
+
+- Make each item in the above-mentioned list a link that will take the user to the selected contact's information page.
+Example Input:
+Example Output:

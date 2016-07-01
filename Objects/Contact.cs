@@ -17,8 +17,8 @@ namespace Contacts.Objects
     _phoneNum = PhoneNum;
     _address = Address;
     _email = Email;
-    _id = _contacts.Count -1;
     _contacts.Add(this);
+    _id = _contacts.Count;
     }
 
     public string GetName()
@@ -60,6 +60,10 @@ namespace Contacts.Objects
     public static List<Contact> GetAll()
     {
       return _contacts;
+    }
+    public static Contact FindContact(int id)
+    {
+      return _contacts[id-1];
     }
   }
 }

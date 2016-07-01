@@ -22,6 +22,10 @@ namespace Contacts
         List<Contact> AllContacts = Contact.GetAll();
         return View["contacts.cshtml", AllContacts];
       };
+      Get["/contacts/{id}"] = parameters => {
+        Contact SelectedContact = Contact.FindContact(parameters.id);
+        return View["contact.cshtml", SelectedContact];
+      };
     }
   }
 }
