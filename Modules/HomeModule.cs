@@ -17,7 +17,7 @@ namespace Contacts
         return View ["add-contact.cshtml"];
       };
       Post["/contact_created"] = _ =>{
-        if (Request.Form["new-contact-name"] == "")
+        if (Request.Form["new-contact-firstname"] == "" && Request.Form["new-contact-lastname"] == "")
         {
           return View["contact-error.cshtml"];
         }
