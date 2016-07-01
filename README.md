@@ -26,3 +26,7 @@ Example Output:
 - Make each item in the above-mentioned list a link that will take the user to the selected contact's information page.
 Example Input:
 Example Output:
+
+- Upon submission of a new contact, a page will notify the user that a new contact has been added and will also display that new contact's info, along with links to go to a list of current contacts or to add a new contact.
+Example Input:
+Example Output:
