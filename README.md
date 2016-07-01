@@ -30,3 +30,7 @@ Example Output:
 - Upon submission of a new contact, a page will notify the user that a new contact has been added and will also display that new contact's info, along with links to go to a list of current contacts or to add a new contact.
 Example Input:
 Example Output:
+
+- Allow user to clear the entire list of contacts via a button on the listing of all contacts.
+Example Input:
+Example Output:

@@ -29,6 +29,10 @@ namespace Contacts
         Contact SelectedContact = Contact.FindContact(parameters.id);
         return View["contact.cshtml", SelectedContact];
       };
+      Post["/contacts_deleted"] = _ =>{
+        Contact.ClearContacts();
+        return View["contacts-deleted.cshtml"];
+      };
     }
   }
 }
