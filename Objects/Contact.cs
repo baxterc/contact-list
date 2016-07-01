@@ -89,8 +89,8 @@ namespace Contacts.Objects
       List<Contact> resultContacts = new List<Contact> {};
       foreach(Contact contact in _contacts)
       {
-        string ContactName = contact.GetFullName();
-        if (ContactName.Contains(SearchName))
+        string ContactName = contact.GetFullName().ToLower();
+        if (ContactName.Contains(SearchName.ToLower()))
         {
           resultContacts.Add(contact);
         }
