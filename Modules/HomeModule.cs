@@ -8,9 +8,9 @@ namespace Contacts
   {
     public HomeModule()
     {
-      Get["/"] = _ = > {
-        return View ["index.cshtml"]
-      }
+      Get["/"] = _ => {
+        return View ["index.cshtml"];
+      };
     }
   }
 }

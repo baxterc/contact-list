@@ -26,7 +26,7 @@ namespace Contacts.Objects
     }
     public void SetName(string newName)
     {
-      _name = newName;
+      _contactName = newName;
     }
     public string GetPhoneNum()
     {
@@ -40,7 +40,7 @@ namespace Contacts.Objects
     {
       return _address;
     }
-    public string SetAddress(string newAddress)
+    public void SetAddress(string newAddress)
     {
       _address = newAddress;
     }
