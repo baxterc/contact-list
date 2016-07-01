@@ -2,18 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Contact Details</title>
+    <title>Found Contacts</title>
     <link rel="stylesheet" href="../Content/css/bootstrap.min.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="../Content/css/styles.css" media="screen" charset="utf-8">
   </head>
   <body>
-    <h1>Contact Details</h1>
-    <p>Name: @Model.GetFullName()<p>
-    <p>Phone Number: @Model.GetPhoneNum()<p>
-    <p>Street Address: @Model.GetAddress().AddressToString()<p>
-    <p>Email Address: @Model.GetEmail()<p>
-
-    <p><a href="/new">Add another Contact</a></p>
+    <h1>Contacts that match your search:</h1>
+    <ul>
+      @foreach (var contact in Model)
+      {
+        <li><a href="contacts/@contact.GetId()">@contact.GetFullName()</a></li>
+      }
+    </ul>
     <p><a href="/">Back to Main Page</a></p>
   </body>
 </html>

@@ -6,15 +6,17 @@ namespace Contacts.Objects
   public class Contact
   {
     private static List<Contact> _contacts = new List<Contact> {};
-    private string _contactName;
+    private string _firstName;
+    private string _lastName;
     private string _phoneNum;
     private StreetAddress _address;
     private string _email;
     private int _id;
 
-    public Contact(string ContactName, string PhoneNum, StreetAddress Address, string Email)
+    public Contact(string FirstName, string LastName, string PhoneNum, StreetAddress Address, string Email)
     {
-    _contactName = ContactName;
+    _firstName = FirstName;
+    _lastName = LastName;
     _phoneNum = PhoneNum;
     _address = Address;
     _email = Email;
@@ -22,13 +24,21 @@ namespace Contacts.Objects
     _id = _contacts.Count;
     }
 
-    public string GetName()
+    public string GetFirstName()
     {
-      return _contactName;
+      return _firstName;
     }
-    public void SetName(string newName)
+    public void SetFirstName(string newFirstName)
     {
-      _contactName = newName;
+      _firstName = newFirstName;
+    }
+    public string GetLastName()
+    {
+      return _lastName;
+    }
+    public void SetLastName(string newLastName)
+    {
+      _lastName = newLastName;
     }
     public string GetPhoneNum()
     {
@@ -62,6 +72,10 @@ namespace Contacts.Objects
     {
       return _contacts;
     }
+    public string GetFullName()
+    {
+      return (_firstName + " " + _lastName);
+    }
     public static Contact FindContact(int id)
     {
       return _contacts[id-1];
@@ -69,6 +83,19 @@ namespace Contacts.Objects
     public static void DeleteAll()
     {
       _contacts.Clear();
+    }
+    public static List<Contact> ContactSearch(string SearchName)
+    {
+      List<Contact> resultContacts = new List<Contact> {};
+      foreach(Contact contact in _contacts)
+      {
+        string ContactName = contact.GetFullName();
+        if (ContactName.Contains(SearchName))
+        {
+          resultContacts.Add(contact);
+        }
+      }
+    return resultContacts;
     }
   }
 }

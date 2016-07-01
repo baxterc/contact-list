@@ -24,7 +24,7 @@ namespace Contacts
         else
         {
           StreetAddress newStreetAddress = new StreetAddress (Request.Form["new-street-number"], Request.Form["new-street-prefix"], Request.Form["new-street-name"], Request.Form["new-street-type"], Request.Form["new-city"], Request.Form["new-state"], Request.Form["new-zip"]);
-          Contact newContact = new Contact (Request.Form["new-contact-name"], Request.Form["new-phone-num"], newStreetAddress, Request.Form["new-email"]);
+          Contact newContact = new Contact (Request.Form["new-contact-firstname"], Request.Form["new-contact-lastname"], Request.Form["new-phone-num"], newStreetAddress, Request.Form["new-email"]);
           return View["contact-created.cshtml", newContact];
         }
       };
@@ -35,6 +35,10 @@ namespace Contacts
       Post["/contacts_deleted"] = _ =>{
         Contact.DeleteAll();
         return View["contacts-deleted.cshtml"];
+      };
+      Post["/search_results"] = _ =>{
+        List<Contact> foundContacts = Contact.ContactSearch(Request.Form["search-name"]);
+        return View["contact-results.cshtml", foundContacts];
       };
     }
   }
