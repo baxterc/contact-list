@@ -1,11 +1,22 @@
-<h1>Your Contact List</h1>
-<ul>
-  @foreach(var contact in Model)
-  {
-    <li><a href="contacts/@contact.GetId()">@contact.GetName()</a></li>
-  }
-</ul>
-<p><a href="/new">Add a Contact</a></p>
-<form action="/contacts_deleted" method="post">
-  <button type="submit" name="button">Clear All Contacts</button>
-</form>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Your Contact List</title>
+    <link rel="stylesheet" href="../Content/css/bootstrap.min.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="../Content/css/styles.css" media="screen" charset="utf-8">
+  </head>
+  <body>
+    <h1>Your Contact List</h1>
+    <ul>
+      @foreach(var contact in Model)
+      {
+        <li><a href="contacts/@contact.GetId()">@contact.GetName()</a></li>
+      }
+    </ul>
+    <p><a href="/new">Add a Contact</a></p>
+    <form action="/contacts_deleted" method="post">
+      <button type="submit" name="button">Clear All Contacts</button>
+    </form>
+  </body>
+</html>

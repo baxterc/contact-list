@@ -1,30 +1,40 @@
-<h1>Add a Contact</h1>
-<form action='/contact_created' method='post'>
-  <label for='new-contact-name'>Name: </label>
-  <input id='new-contact-name' name='new-contact-name' type='text'>
-  <label for='new-phone-num'>Phone Number: </label>
-  <input id='new-phone-num' name='new-phone-num' type='text'>
-
-  <label for='new-email'>Email Address: </label>
-  <input id='new-email' name='new-email' type='text'>
-
-<div id="address-entry">
-  <label for='new-street-number'>Street Number: </label>
-  <input id='new-street-number' name='new-street-number' type='text'>
-  <label for='new-street-prefix'>Street Prefix: </label>
-  <input id='new-street-prefix' name='new-street-prefix' type='text'>
-  <label for='new-street-name'>Street Name: </label>
-  <input id='new-street-name' name='new-street-name' type='text'>
-  <label for='new-street-type'>Street Type: </label>
-  <input id='new-street-type' name='new-street-type' type='text'>
-  <label for='new-city'>City: </label>
-  <input id='new-city' name='new-city' type='text'>
-  <label for='new-state'>State: </label>
-  <input id='new-state' name='new-state' type='text'>
-  <label for='new-zip'>Zip Code: </label>
-  <input id='new-zip' name='new-zip' type='text'>
-</div>
-
-  <button type='submit'>Add This Contact</button>
-</form>
-<a href="/">Return to your contact list</a>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add a Contact</title>
+    <link rel="stylesheet" href="../Content/css/bootstrap.min.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="../Content/css/styles.css" media="screen" charset="utf-8">
+  </head>
+  <body>
+    <h1>Add a Contact</h1>
+    <form action='/contact_created' method='post'>
+      <label for='new-contact-name'>Name: </label>
+      <input id='new-contact-name' name='new-contact-name' type='text'>
+      <label for='new-phone-num'>Phone Number: </label>
+      <input id='new-phone-num' name='new-phone-num' type='text'>
+      <label for='new-email'>Email Address: </label>
+      <input id='new-email' name='new-email' type='text'>
+    <div id="address-entry">
+      <p><h3>Street Address Information</h3>
+      <label for='new-street-number'>Street Number: </label>
+      <input id='new-street-number' name='new-street-number' type='text'>
+      <label for='new-street-prefix'>Street Prefix: </label>
+      <input id='new-street-prefix' name='new-street-prefix' type='text'>
+      <label for='new-street-name'>Street Name: </label>
+      <input id='new-street-name' name='new-street-name' type='text'>
+      <label for='new-street-type'>Street Type: </label>
+      <input id='new-street-type' name='new-street-type' type='text'>
+      </p>
+      <label for='new-city'>City: </label>
+      <input id='new-city' name='new-city' type='text'>
+      <label for='new-state'>State: </label>
+      <input id='new-state' name='new-state' type='text'>
+      <label for='new-zip'>Zip Code: </label>
+      <input id='new-zip' name='new-zip' type='text'>
+    </div>
+      <button type='submit'>Add This Contact</button>
+    </form>
+    <a href="/">Return to your contact list</a>
+  </body>
+</html>

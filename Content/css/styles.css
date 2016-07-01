@@ -1,0 +1,32 @@
+body {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+button {
+  margin-bottom: 30px;
+}
+
+#address-entry {
+  margin-top: 45px;
+  margin-bottom: 30px;
+}
+
+#new-contact {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+#address-entry input {
+  margin-right: 20px;
+}
+
+#address-entry #new-street-number {
+  width: 80px;
+}
+#address-entry #new-street-prefix {
+  width: 30px;
+}
+#address-entry #new-street-type {
+  width: 50px;
+}
