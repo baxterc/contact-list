@@ -65,7 +65,7 @@ namespace Contacts.Objects
     {
       return _contacts[id-1];
     }
-    public static void ClearContacts()
+    public static void DeleteAll()
     {
       _contacts.Clear();
     }

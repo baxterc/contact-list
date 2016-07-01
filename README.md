@@ -34,3 +34,7 @@ Example Output:
 - Allow user to clear the entire list of contacts via a button on the listing of all contacts.
 Example Input:
 Example Output:
+
+- Check for a blank input in the name field of the contact form; other inputs can be blank, but if the name is empty, prevent the contact from being added.
+Example Input: Name: ""
+Example Output: "Please give your contact a name"
