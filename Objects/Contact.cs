@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using StreetAddresses.Objects;
 
 namespace Contacts.Objects
 {
@@ -7,11 +8,11 @@ namespace Contacts.Objects
     private static List<Contact> _contacts = new List<Contact> {};
     private string _contactName;
     private string _phoneNum;
-    private string _address;
+    private StreetAddress _address;
     private string _email;
     private int _id;
 
-    public Contact(string ContactName, string PhoneNum, string Address, string Email)
+    public Contact(string ContactName, string PhoneNum, StreetAddress Address, string Email)
     {
     _contactName = ContactName;
     _phoneNum = PhoneNum;
@@ -37,11 +38,11 @@ namespace Contacts.Objects
     {
       _phoneNum = newPhoneNum;
     }
-    public string GetAddress()
+    public StreetAddress GetAddress()
     {
       return _address;
     }
-    public void SetAddress(string newAddress)
+    public void SetAddress(StreetAddress newAddress)
     {
       _address = newAddress;
     }

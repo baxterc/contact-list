@@ -38,3 +38,5 @@ Example Output:
 - Check for a blank input in the name field of the contact form; other inputs can be blank, but if the name is empty, prevent the contact from being added.
 Example Input: Name: ""
 Example Output: "Please give your contact a name"
+
+- Use a StreetAddress object to store the contact's street address.

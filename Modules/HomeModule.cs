@@ -1,6 +1,7 @@
 using Nancy;
 using System.Collections.Generic;
 using Contacts.Objects;
+using StreetAddresses.Objects;
 
 namespace Contacts
 {
@@ -22,7 +23,8 @@ namespace Contacts
         }
         else
         {
-          Contact newContact = new Contact (Request.Form["new-contact-name"], Request.Form["new-phone-num"], Request.Form["new-address"], Request.Form["new-email"]);
+          StreetAddress newStreetAddress = new StreetAddress (Request.Form["new-street-number"], Request.Form["new-street-prefix"], Request.Form["new-street-name"], Request.Form["new-street-type"], Request.Form["new-city"], Request.Form["new-state"], Request.Form["new-zip"]);
+          Contact newContact = new Contact (Request.Form["new-contact-name"], Request.Form["new-phone-num"], newStreetAddress, Request.Form["new-email"]);
           return View["contact-created.cshtml", newContact];
         }
       };
