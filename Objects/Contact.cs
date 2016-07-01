@@ -4,12 +4,12 @@ namespace Contacts.Objects
 {
   public class Contact
   {
+    private static List<Contact> _contacts = new List<Contact> {};
     private string _contactName;
     private string _phoneNum;
     private string _address;
     private string _email;
     private int _id;
-    private static List<Contact> _contacts = new List<Contact> {};
 
     public Contact(string ContactName, string PhoneNum, string Address, string Email)
     {
@@ -18,6 +18,7 @@ namespace Contacts.Objects
     _address = Address;
     _email = Email;
     _id = _contacts.Count -1;
+    _contacts.Add(this);
     }
 
     public string GetName()
@@ -55,6 +56,10 @@ namespace Contacts.Objects
     public int GetId()
     {
       return _id;
+    }
+    public static List<Contact> GetAll()
+    {
+      return _contacts;
     }
   }
 }

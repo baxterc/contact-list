@@ -18,3 +18,5 @@ Example Output:
 - Create a form to allow the user to create a new Contact object.
 Example Input:
 Example Output:
+
+- Show user-created contacts as a list.

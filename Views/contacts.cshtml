@@ -1,1 +1,7 @@
 <h1>Your Contacts</h1>
+<ul>
+  @foreach(var contact in Model)
+  {
+    <li>@contact.GetName()</li>
+  }
+</ul>

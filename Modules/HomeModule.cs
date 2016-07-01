@@ -17,6 +17,11 @@ namespace Contacts
       Get["/contacts/new"] = _ => {
         return View ["add-contact.cshtml"];
       };
+      Post["/contacts"] = _ => {
+        Contact newContact = new Contact (Request.Form["new-contact-name"], Request.Form["new-phone-num"], Request.Form["new-address"], Request.Form["new-email"]);
+        List<Contact> AllContacts = Contact.GetAll();
+        return View["contacts.cshtml", AllContacts];
+      };
     }
   }
 }
